@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mardiya Babysitting</title>
+  <title>Amal Mardiya Babysitting</title>
   <style>
     * {
       box-sizing: border-box;
@@ -11,151 +11,338 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fcf6f3;
-      color: #5d4a4a;
-      line-height: 1.6;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f8f4fb;
+      color: #5f4b63;
+      line-height: 1.7;
     }
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px 80px;
-      background: linear-gradient(to bottom, #f8e9e5, #fcf6f3);
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 16px;
-      color: #6e4f4f;
+    .topbar {
+      background: #ffffffcc;
+      backdrop-filter: blur(8px);
+      padding: 18px 24px;
+      border-bottom: 1px solid #eee3f4;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto 30px;
-      font-size: 20px;
-      color: #7a6363;
-    }
-
-    .button {
-      display: inline-block;
-      background: #c7939d;
-      color: white;
-      text-decoration: none;
-      padding: 16px 30px;
-      border-radius: 999px;
-      font-size: 16px;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      background: #b77f89;
-    }
-
-    .section {
-      max-width: 1000px;
+    .topbar-inner {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 70px 20px;
-    }
-
-    .section h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 35px;
-      color: #6e4f4f;
-    }
-
-    .card {
-      background: white;
-      border-radius: 22px;
-      padding: 28px;
-      margin-bottom: 22px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
-    .small-card {
-      background: white;
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    .brand {
+      font-size: 28px;
+      color: #6f5877;
+      margin: 0;
+    }
+
+    .brand-sub {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #8c7692;
+      font-family: Arial, sans-serif;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #b98dc7;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(185, 141, 199, 0.25);
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 70px 20px 40px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text {
+      background: linear-gradient(180deg, #fcfbfe 0%, #f5eef9 100%);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: 0 12px 30px rgba(140, 118, 146, 0.10);
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      color: #a58bb1;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 54px;
+      line-height: 1.1;
+      margin: 0 0 20px;
+      color: #5e4566;
+    }
+
+    .hero-text p {
+      font-family: Arial, sans-serif;
+      font-size: 19px;
+      color: #6d5a73;
+      margin-bottom: 26px;
+    }
+
+    .hero-image img,
+    .feature-image img {
+      border-radius: 28px;
+      box-shadow: 0 14px 34px rgba(140, 118, 146, 0.16);
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 35px 20px 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 18px;
+      color: #654d6d;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 34px;
+      font-family: Arial, sans-serif;
+      color: #75627c;
+      font-size: 18px;
+    }
+
+    .about-box {
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 34px;
+      box-shadow: 0 12px 30px rgba(140, 118, 146, 0.10);
+      font-family: Arial, sans-serif;
+      color: #6d5a73;
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #ffffff 0%, #faf6fc 100%);
+      border-radius: 24px;
+      padding: 28px 22px;
+      box-shadow: 0 10px 24px rgba(140, 118, 146, 0.08);
       text-align: center;
     }
 
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #6c5474;
+      font-size: 24px;
+    }
+
+    .card p {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #78667f;
+      font-size: 15px;
+    }
+
+    .feature {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .feature-text {
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 36px;
+      box-shadow: 0 12px 30px rgba(140, 118, 146, 0.10);
+    }
+
+    .feature-text h2 {
+      font-size: 38px;
+      margin-top: 0;
+      color: #654d6d;
+    }
+
+    .feature-text p {
+      font-family: Arial, sans-serif;
+      color: #75627c;
+      font-size: 17px;
+    }
+
     .contact-box {
-      background: #f7e7e4;
-      border-radius: 24px;
-      padding: 35px 25px;
+      background: linear-gradient(180deg, #f3eafa 0%, #efe4f7 100%);
+      border-radius: 28px;
+      padding: 40px 28px;
       text-align: center;
+      box-shadow: 0 12px 30px rgba(140, 118, 146, 0.10);
+    }
+
+    .contact-box p {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 0 auto 24px;
+      color: #735f79;
+      font-size: 18px;
     }
 
     footer {
       text-align: center;
-      padding: 30px 20px;
-      color: #8a7272;
+      padding: 28px 20px 36px;
+      color: #8f7a96;
+      font-family: Arial, sans-serif;
       font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .feature,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
 
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div>
+        <h2 class="brand">Amal Mardiya Babysitting</h2>
+        <p class="brand-sub">Where children feel safe, welcomed and at home</p>
+      </div>
+      <a class="whatsapp-btn" href="https://wa.me/447594490900">Message on WhatsApp</a>
+    </div>
+  </div>
+
   <section class="hero">
-    <h1>Mardiya Babysitting</h1>
-    <p>
-      Warm, gentle and welcoming babysitting for families looking for kindness,
-      care and peace of mind.
+    <div class="hero-text">
+      <div class="eyebrow">Warm • Gentle • Welcoming</div>
+      <h1>Where children feel safe, welcomed and at home</h1>
+      <p>
+        A soft, caring babysitting service in a calm home-like setting, where little ones can feel settled,
+        comfortable and looked after with kindness.
+      </p>
+      <a class="whatsapp-btn" href="https://wa.me/447594490900">Ask on WhatsApp</a>
+    </div>
+    <div class="hero-image">
+      <img src="IMAGE1-HERE" alt="Babysitting promotion image" />
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-intro">
+      I offer a gentle and welcoming babysitting space with a warm family feel, giving parents peace of mind
+      and children a place where they can feel cared for, comfortable and at ease.
     </p>
-    <a class="button" href="https://wa.me/447594490900">Message on WhatsApp</a>
-  </section>
-
-  <section class="section">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>
-        I offer a calm and caring babysitting service with a warm, home-like feel,
-        where children can feel safe, settled and looked after with kindness.
-      </p>
-      <p>
-        My aim is to give parents reassurance and children a gentle, welcoming space.
-      </p>
+    <div class="about-box">
+      I believe childcare should feel warm, safe and reassuring. My aim is to create a peaceful setting where children are treated with kindness, patience and care, and where parents can feel confident leaving their little ones in loving hands.
     </div>
   </section>
 
   <section class="section">
-    <h2>Why Families Choose Me</h2>
-    <div class="grid">
-      <div class="small-card">Warm, patient and welcoming care</div>
-      <div class="small-card">A gentle and family-centred environment</div>
-      <div class="small-card">Easy contact through WhatsApp</div>
+    <h2 class="section-title">What I Offer</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Babysitting</h3>
+        <p>Warm and gentle babysitting in a caring home-like setting.</p>
+      </div>
+      <div class="card">
+        <h3>Ages Welcome</h3>
+        <p>Support for little ones and older children in a calm and welcoming space.</p>
+      </div>
+      <div class="card">
+        <h3>Flexible Support</h3>
+        <p>Simple and easy communication for parents through WhatsApp.</p>
+      </div>
+      <div class="card">
+        <h3>Kind Care</h3>
+        <p>Children looked after with warmth, patience and gentle attention.</p>
+      </div>
+      <div class="card">
+        <h3>Home-Like Feel</h3>
+        <p>A soft and settled atmosphere where children can feel comfortable and safe.</p>
+      </div>
+      <div class="card">
+        <h3>Peace of Mind</h3>
+        <p>A reassuring space for parents looking for trusted and welcoming childcare.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <h2>What I Offer</h2>
-    <div class="grid">
-      <div class="small-card">Babysitting in a calm and caring setting</div>
-      <div class="small-card">A warm, home-like atmosphere</div>
-      <div class="small-card">Friendly and simple communication with parents</div>
+  <section class="feature">
+    <div class="feature-image">
+      <img src="IMAGE2-HERE" alt="Childcare promotion image" />
+    </div>
+    <div class="feature-text">
+      <h2>Why Parents Choose Me</h2>
+      <p>Warm and patient care in a calm and welcoming environment.</p>
+      <p>Children treated with kindness, gentleness and a real home-like feel.</p>
+      <p>Easy and direct communication for parents who want something simple, soft and trustworthy.</p>
+      <a class="whatsapp-btn" href="https://wa.me/447594490900">Contact Me</a>
     </div>
   </section>
 
   <section class="section">
     <div class="contact-box">
-      <h2>Get in Touch</h2>
+      <h2 class="section-title">Get in Touch</h2>
       <p>
-        To ask a question or speak about babysitting, message me directly on WhatsApp.
+        If you would like to ask a question, check availability, or speak about babysitting,
+        feel free to message me directly on WhatsApp.
       </p>
-      <a class="button" href="https://wa.me/447594490900">Contact Me</a>
+      <a class="whatsapp-btn" href="https://wa.me/447594490900">Message Me on WhatsApp</a>
     </div>
   </section>
 
   <footer>
-    © 2026 Mardiya Babysitting
+    © 2026 Amal Mardiya Babysitting
   </footer>
 
 </body>
