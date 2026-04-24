@@ -5,91 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mardiya Babysitting</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f8f1ed;
-      color: #5f4b4b;
+      background: #fcf6f3;
+      color: #5d4a4a;
+      line-height: 1.6;
     }
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(to bottom, #f5e7e3, #f8f1ed);
+      padding: 100px 20px 80px;
+      background: linear-gradient(to bottom, #f8e9e5, #fcf6f3);
     }
 
     .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-      color: #6a4b4b;
+      font-size: 48px;
+      margin-bottom: 16px;
+      color: #6e4f4f;
     }
 
     .hero p {
+      max-width: 720px;
+      margin: 0 auto 30px;
       font-size: 20px;
-      max-width: 700px;
-      margin: 0 auto 25px;
-      line-height: 1.6;
+      color: #7a6363;
     }
 
     .button {
       display: inline-block;
-      background: #b88b8b;
+      background: #c7939d;
       color: white;
       text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 30px;
+      padding: 16px 30px;
+      border-radius: 999px;
       font-size: 16px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: #b77f89;
     }
 
     .section {
-      max-width: 950px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
     .section h2 {
       text-align: center;
-      margin-bottom: 30px;
-      color: #6a4b4b;
+      font-size: 32px;
+      margin-bottom: 35px;
+      color: #6e4f4f;
     }
 
     .card {
       background: white;
-      border-radius: 18px;
+      border-radius: 22px;
+      padding: 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .small-card {
+      background: white;
+      border-radius: 22px;
       padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      text-align: center;
+    }
+
+    .contact-box {
+      background: #f7e7e4;
+      border-radius: 24px;
+      padding: 35px 25px;
+      text-align: center;
     }
 
     footer {
       text-align: center;
       padding: 30px 20px;
-      color: #7b6666;
+      color: #8a7272;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
+
   <section class="hero">
     <h1>Mardiya Babysitting</h1>
-    <p>A warm, gentle and welcoming babysitting service for families looking for care, kindness and peace of mind.</p>
+    <p>
+      Warm, gentle and welcoming babysitting for families looking for kindness,
+      care and peace of mind.
+    </p>
     <a class="button" href="https://wa.me/447594490900">Message on WhatsApp</a>
   </section>
 
   <section class="section">
-    <h2>About</h2>
+    <h2>About Me</h2>
     <div class="card">
-      <p>I offer a caring and calm babysitting service with a warm, home-like feel where children can feel safe, settled and looked after with kindness.</p>
+      <p>
+        I offer a calm and caring babysitting service with a warm, home-like feel,
+        where children can feel safe, settled and looked after with kindness.
+      </p>
+      <p>
+        My aim is to give parents reassurance and children a gentle, welcoming space.
+      </p>
     </div>
+  </section>
 
+  <section class="section">
     <h2>Why Families Choose Me</h2>
-    <div class="card">Warm, patient and welcoming care</div>
-    <div class="card">A gentle and family-centred environment</div>
-    <div class="card">Clear and easy contact through WhatsApp</div>
+    <div class="grid">
+      <div class="small-card">Warm, patient and welcoming care</div>
+      <div class="small-card">A gentle and family-centred environment</div>
+      <div class="small-card">Easy contact through WhatsApp</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What I Offer</h2>
+    <div class="grid">
+      <div class="small-card">Babysitting in a calm and caring setting</div>
+      <div class="small-card">A warm, home-like atmosphere</div>
+      <div class="small-card">Friendly and simple communication with parents</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+      <p>
+        To ask a question or speak about babysitting, message me directly on WhatsApp.
+      </p>
+      <a class="button" href="https://wa.me/447594490900">Contact Me</a>
+    </div>
   </section>
 
   <footer>
     © 2026 Mardiya Babysitting
   </footer>
+
 </body>
 </html>
