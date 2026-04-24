@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amal Mardiya Babysitting</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
     :root {
       --lilac: #e9dcf7;
       --lavender: #f2ecff;
@@ -22,7 +24,7 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
       color: var(--ink);
       line-height: 1.65;
       background:
@@ -77,10 +79,11 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(8px);
-      background: rgba(255, 255, 255, 0.86);
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.9);
       border-bottom: 1px solid rgba(236, 227, 251, 0.9);
+      box-shadow: 0 5px 16px rgba(115, 90, 138, 0.08);
     }
 
     .topbar-inner {
@@ -89,13 +92,16 @@
       align-items: center;
       justify-content: space-between;
       gap: 18px;
+      padding: 12px 0;
     }
 
     .brand {
       margin: 0;
       font-size: clamp(1.45rem, 2.8vw, 1.9rem);
       color: #645173;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     .brand-sub {
@@ -126,7 +132,24 @@
     }
 
     .hero {
-      padding-top: 60px;
+      padding-top: 44px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 12px 0 0;
+      width: min(1160px, 92%);
+      margin: 0 auto;
+      border-radius: 36px;
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.9), rgba(245, 234, 255, 0.82), rgba(253, 241, 246, 0.75)),
+        url('1.jpg') center/cover no-repeat;
+      background-blend-mode: screen, normal;
+      opacity: 0.3;
+      filter: saturate(0.75);
+      pointer-events: none;
     }
 
     .hero-grid,
@@ -135,14 +158,33 @@
       gap: 34px;
       align-items: center;
       grid-template-columns: 1.1fr 1fr;
+      position: relative;
+      z-index: 1;
     }
 
     .panel {
-      background: linear-gradient(160deg, #ffffff, #f8f1ff 62%, #fdf3f8);
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(248, 241, 255, 0.96) 62%, rgba(253, 243, 248, 0.96));
       border: 1px solid #eee4fb;
       border-radius: 28px;
       padding: clamp(24px, 5vw, 42px);
       box-shadow: var(--soft-shadow);
+    }
+
+    .hero-portrait-wrap {
+      position: relative;
+      padding: 14px;
+      border-radius: 36px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(241, 232, 255, 0.82), rgba(253,241,246,0.8));
+      box-shadow: var(--soft-shadow);
+    }
+
+    .hero-portrait-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      pointer-events: none;
     }
 
     .eyebrow {
@@ -157,7 +199,9 @@
     h1, h2, h3 {
       margin-top: 0;
       color: #5f4c70;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
     }
 
     h1 {
@@ -213,7 +257,7 @@
     }
 
     .card h3 {
-      font-size: 1.25rem;
+      font-size: 1.45rem;
       margin-bottom: 8px;
     }
 
@@ -261,7 +305,9 @@
       }
 
       section { padding: 56px 0; }
-      .hero { padding-top: 34px; }
+      .hero { padding-top: 28px; }
+      .hero::before { inset: 8px 0 0; }
+      .hero-portrait-wrap { max-width: 420px; }
     }
   </style>
 </head>
@@ -272,6 +318,7 @@
         <h2 class="brand">Amal Mardiya Babysitting</h2>
         <p class="brand-sub">Warm, dependable care for your little ones</p>
       </div>
+      <a class="whatsapp-btn" href="https://wa.me/447594490900">Message on WhatsApp</a>
     </div>
   </header>
 
@@ -279,16 +326,14 @@
     <section class="hero" id="hero">
       <div class="container hero-grid">
         <div class="panel">
-          <p class="eyebrow">Hero</p>
-          <h1>Gentle, professional babysitting in a calm and caring space.</h1>
+          <h1>Where children feel safe, welcomed and at home</h1>
           <p class="lead">
-            At Amal Mardiya Babysitting, your child is cared for with patience, kindness, and close attention.
-            I create a peaceful environment where children feel secure, happy, and truly welcomed.
+            Warm, gentle babysitting in a caring home-like setting, where little ones can feel comfortable,
+            settled and looked after with kindness.
           </p>
-          <a class="whatsapp-btn" href="https://wa.me/447594490900">Ask on WhatsApp</a>
         </div>
-        <div>
-          <img src="1.jpg" alt="Babysitting image near the hero section" />
+        <div class="hero-portrait-wrap">
+          <img src="2.jpg" alt="Babysitting image near the hero section" />
         </div>
       </div>
     </section>
@@ -328,7 +373,7 @@
     <section id="why">
       <div class="container why-grid">
         <div>
-          <img src="2.jpg" alt="Babysitting image in lower section" />
+          <img src="1.jpg" alt="Babysitting image in lower section" />
         </div>
         <div class="panel">
           <h2 style="font-size: clamp(1.7rem, 4vw, 2.4rem);">Why Parents Choose Me</h2>
@@ -351,7 +396,7 @@
             or check availability, send me a message on WhatsApp and I'll get back to you as soon as I can.
           </p>
           <p style="margin-top: 22px;">
-            <a class="whatsapp-btn" href="https://wa.me/447594490900">Message Me on WhatsApp</a>
+            <a class="whatsapp-btn" href="https://wa.me/447594490900">Message on WhatsApp</a>
           </p>
         </div>
       </div>
