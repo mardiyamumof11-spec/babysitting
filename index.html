@@ -244,6 +244,50 @@
       background: linear-gradient(155deg, #ffffff, #f8f2ff 80%, #eef7ff);
     }
 
+    .trust {
+      padding-top: 48px;
+    }
+
+    .trust-card {
+      max-width: 920px;
+      margin: 0 auto;
+      border-radius: 30px;
+      border: 1px solid #e8dcf8;
+      background:
+        linear-gradient(150deg, rgba(255, 255, 255, 0.96), rgba(245, 235, 255, 0.94) 60%, rgba(252, 243, 250, 0.94)),
+        radial-gradient(circle at 8% 20%, rgba(233, 220, 247, 0.28), transparent 48%),
+        radial-gradient(circle at 92% 80%, rgba(243, 248, 255, 0.6), transparent 52%);
+      box-shadow: var(--soft-shadow);
+      padding: clamp(24px, 6vw, 48px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust-card::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      pointer-events: none;
+    }
+
+    .trust-title {
+      margin-bottom: 14px;
+      text-align: center;
+      font-size: clamp(1.85rem, 4.2vw, 2.65rem);
+      letter-spacing: 0.02em;
+    }
+
+    .trust-text {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #6f6380;
+      font-size: clamp(1rem, 2.4vw, 1.1rem);
+      line-height: 1.86;
+      text-align: center;
+    }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -310,6 +354,9 @@
       .hero { padding-top: 28px; }
       .hero::before { inset: 8px 0 0; }
       .hero-portrait-wrap { max-width: 420px; }
+      .trust { padding-top: 34px; }
+      .trust-card { border-radius: 24px; }
+      .trust-text { text-align: left; }
     }
   </style>
 </head>
@@ -352,6 +399,20 @@
             I provide attentive babysitting with a warm, dependable approach. Every family is different,
             so I take time to understand your child's routine, comfort needs, and personality. My goal is simple:
             to help your child feel at ease and help you feel confident while you're away.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" id="trust">
+      <div class="container">
+        <div class="trust-card">
+          <h2 class="trust-title">A Reassuring and Caring Approach</h2>
+          <p class="trust-text">
+            Parents’ peace of mind matters deeply to me. I have completed my DBS check and it came back
+            with no record, I have my GP Health Declaration Form, and I will soon be doing my paediatric
+            first aid course. Alongside this, I bring 21 years of hands-on experience as a mother, which
+            has given me a deep understanding of children, care, patience, and everyday family life.
           </p>
         </div>
       </div>
