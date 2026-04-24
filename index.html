@@ -8,8 +8,10 @@
     :root {
       --lilac: #e9dcf7;
       --lavender: #f2ecff;
+      --blush: #fdf1f6;
       --white: #ffffff;
-      --blue: #edf6ff;
+      --blue: #f3f8ff;
+      --gold: #ddc48b;
       --ink: #5c4f6a;
       --muted: #766a84;
       --shadow: 0 16px 40px rgba(120, 94, 147, 0.14);
@@ -24,9 +26,40 @@
       color: var(--ink);
       line-height: 1.65;
       background:
-        radial-gradient(circle at 0% 0%, #f8f3ff 0%, transparent 45%),
-        radial-gradient(circle at 100% 100%, #eefdff 0%, transparent 40%),
-        linear-gradient(180deg, #f9f5ff 0%, #f5f9ff 100%);
+        radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.85) 0 22%, transparent 46%),
+        radial-gradient(circle at 84% 22%, rgba(253, 241, 246, 0.75) 0 19%, transparent 45%),
+        radial-gradient(circle at 16% 86%, rgba(233, 220, 247, 0.48) 0 20%, transparent 45%),
+        radial-gradient(circle at 92% 84%, rgba(243, 248, 255, 0.86) 0 24%, transparent 48%),
+        linear-gradient(180deg, #fcf8ff 0%, #f8f2ff 52%, #f6fbff 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    body::before {
+      background:
+        radial-gradient(10px 10px at 8% 14%, rgba(221, 196, 139, 0.22) 0, transparent 72%),
+        radial-gradient(10px 10px at 22% 70%, rgba(221, 196, 139, 0.15) 0, transparent 74%),
+        radial-gradient(8px 8px at 77% 18%, rgba(221, 196, 139, 0.16) 0, transparent 74%),
+        radial-gradient(8px 8px at 90% 62%, rgba(221, 196, 139, 0.13) 0, transparent 75%);
+      opacity: 0.6;
+    }
+
+    body::after {
+      background:
+        radial-gradient(40px 26px at 7% 24%, rgba(169, 136, 201, 0.08) 0, transparent 70%),
+        radial-gradient(38px 22px at 93% 35%, rgba(166, 123, 203, 0.08) 0, transparent 70%),
+        radial-gradient(34px 22px at 12% 74%, rgba(196, 163, 221, 0.08) 0, transparent 72%),
+        radial-gradient(42px 24px at 88% 86%, rgba(198, 164, 225, 0.08) 0, transparent 72%);
+      opacity: 0.8;
     }
 
     img {
@@ -46,8 +79,8 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(8px);
-      background: rgba(255, 255, 255, 0.82);
-      border-bottom: 1px solid #ece3fb;
+      background: rgba(255, 255, 255, 0.86);
+      border-bottom: 1px solid rgba(236, 227, 251, 0.9);
     }
 
     .topbar-inner {
@@ -74,7 +107,7 @@
     .whatsapp-btn {
       display: inline-block;
       text-decoration: none;
-      background: linear-gradient(135deg, #b996db, #a583d0);
+      background: linear-gradient(135deg, #bf9ade 0%, #af88d8 65%, #d8c18d 100%);
       color: #fff;
       font-weight: 700;
       border-radius: 999px;
@@ -85,7 +118,7 @@
 
     .whatsapp-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 13px 24px rgba(142, 101, 183, 0.32);
+      box-shadow: 0 13px 24px rgba(142, 101, 183, 0.34);
     }
 
     section {
@@ -105,8 +138,8 @@
     }
 
     .panel {
-      background: linear-gradient(160deg, var(--white), var(--lavender));
-      border: 1px solid #ece5f9;
+      background: linear-gradient(160deg, #ffffff, #f8f1ff 62%, #fdf3f8);
+      border: 1px solid #eee4fb;
       border-radius: 28px;
       padding: clamp(24px, 5vw, 42px);
       box-shadow: var(--soft-shadow);
@@ -154,7 +187,7 @@
     }
 
     .about {
-      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(241, 233, 255, 0.55));
+      background: linear-gradient(180deg, rgba(255,255,255,0.74), rgba(249, 239, 255, 0.64), rgba(253, 242, 248, 0.62));
       border-top: 1px solid #efe6fb;
       border-bottom: 1px solid #efe6fb;
     }
@@ -173,7 +206,7 @@
 
     .card {
       border-radius: 22px;
-      background: linear-gradient(160deg, #ffffff, #f4edff 75%, #eef6ff);
+      background: linear-gradient(160deg, #ffffff, #f6efff 70%, #fdf1f6);
       border: 1px solid #ece3fa;
       padding: 22px;
       box-shadow: var(--soft-shadow);
@@ -203,7 +236,7 @@
       margin: 0 auto;
       text-align: center;
       border-radius: 28px;
-      background: linear-gradient(150deg, #ffffff, #f2e9ff 72%, #eaf6ff);
+      background: linear-gradient(150deg, #ffffff, #f4eaff 66%, #fdf0f7);
       border: 1px solid #e8def8;
       padding: clamp(26px, 5vw, 40px);
       box-shadow: var(--soft-shadow);
@@ -239,7 +272,6 @@
         <h2 class="brand">Amal Mardiya Babysitting</h2>
         <p class="brand-sub">Warm, dependable care for your little ones</p>
       </div>
-      <a class="whatsapp-btn" href="https://wa.me/447594490900">Message on WhatsApp</a>
     </div>
   </header>
 
