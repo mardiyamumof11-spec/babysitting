@@ -248,6 +248,50 @@
       padding-top: 48px;
     }
 
+    .devices {
+      padding-top: 34px;
+    }
+
+    .devices-card {
+      max-width: 920px;
+      margin: 0 auto;
+      border-radius: 30px;
+      border: 1px solid #eadff8;
+      background:
+        linear-gradient(150deg, rgba(255, 255, 255, 0.97), rgba(250, 241, 255, 0.96) 56%, rgba(253, 244, 249, 0.96)),
+        radial-gradient(circle at 12% 20%, rgba(233, 220, 247, 0.26), transparent 50%),
+        radial-gradient(circle at 88% 78%, rgba(243, 248, 255, 0.58), transparent 54%);
+      box-shadow: var(--soft-shadow);
+      padding: clamp(24px, 6vw, 46px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .devices-card::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      pointer-events: none;
+    }
+
+    .devices-title {
+      margin-bottom: 12px;
+      text-align: center;
+      font-size: clamp(1.95rem, 4.2vw, 2.7rem);
+      letter-spacing: 0.02em;
+    }
+
+    .devices-note {
+      margin: 0 auto;
+      max-width: 760px;
+      text-align: center;
+      color: #6f6380;
+      font-size: clamp(1rem, 2.2vw, 1.1rem);
+      line-height: 1.9;
+    }
+
     .trust-card {
       max-width: 920px;
       margin: 0 auto;
@@ -410,6 +454,19 @@
             has given me a deep understanding of children, care, patience, and everyday family life.
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="devices" id="devices">
+      <div class="container">
+        <article class="devices-card">
+          <h2 class="devices-title">Devices</h2>
+          <p class="devices-note">
+            During babysitting time, I prefer to keep the focus on quality time together rather than on
+            screens or devices. My aim is to create a warm, family like atmosphere where children can play,
+            connect and enjoy being present in the moment.
+          </p>
+        </article>
       </div>
     </section>
 
